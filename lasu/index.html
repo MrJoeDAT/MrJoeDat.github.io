@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <!-- Link to the Bootstrap CSS stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- JavaScript libraries for Bootstrap and jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+    <style>
+		.container {
+			width: 50%; /* Set the desired width, in percentages or other units */
+			max-width: 1200px; /* Optionally, set a maximum width to prevent it from getting too wide */
+			margin: 0 auto; /* Center the container horizontally on the page */
+			padding: 20px; /* Optionally, add padding to create space inside the container */
+		 /* position: relative; Add relative positioning */
+		}
+		
+		/* Increase the size and center the first column */
+		.col-md-4:first-child {
+			margin-top: 70px;
+			width: 40%; /* Adjust the width as needed */
+		}
+
+		/* Move the third column to the right */
+		.col-md-4:last-child {
+			margin-top: 70px;
+			margin-left: 130px;
+			width: 42%; /* Adjust the width as needed */
+		}
+		
+        .cl_black {
+            color: #000; /* Black font color */
+        }
+		
+		.cl_white{
+        color: rgb(255, 255, 255);
+		}
+		
+		/* Change the color and font for h1 */
+		h1 {
+        color: black; /* Change to your desired color (e.g., red) using hexadecimal or color names */
+        font-family: Arial, sans-serif; /* Change the font family as needed */
+		font-size: 120px; /* Change font size */
+		}
+
+		/* Change the color and font for p with class "lead" */
+		p.lead {
+			color: purple; /* Change to your desired color (e.g., green) using hexadecimal or color names */
+			font-family: "Times New Roman", serif; /* Change the font family as needed */
+			font-size: 40px; /* Change font size */
+			margin-top: -20px;
+		}
+		/* Change the color and font for p with class "lead" */
+		p.sub {
+			color: black; /* Change to your desired color (e.g., green) using hexadecimal or color names */
+			font-family: "Times New Roman", serif; /* Change the font family as needed */
+			font-size: 20px; /* Change font size */
+			margin-top: -20px;
+		}
+
+
+		/* Header styles */
+        section {
+		  /*position: relative;*/
+            width: 100vw;
+            height: 100vh;
+            padding: 50px;
+		  /*margin-top: 50px; Adjusted margin to prevent overlap with the header */
+          /*background: #fff; White background */
+        }
+
+        .footer-section {
+			margin-top: 50px;
+            background-color: #333; /* Dark background color */
+        }
+
+        .footer-section p {
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0;
+        }
+
+        /* Add hover effect to navigation links */
+        .navbar-nav .nav-link:hover {
+            color: #00BFFF; /* Change text color on hover */
+        }
+
+        /* Create shapes for decorative dividers */
+        .divider {
+            height: 10px;
+            background: #00BFFF;
+            margin: 20px 0;
+        }
+
+        /* Add subtle animations to the thumbnail images */
+        .thumbnail img {
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .thumbnail img:hover {
+            transform: scale(1.1);
+        }
+		.thumbnail {
+			border-radius: 50%; /* Makes the elements circular */
+			color: #ffffff; /* White text color */
+			width: 60%; /* Adjust the width of the thumbnail container to 50% */
+			padding-bottom: 3%; /* Set the padding-bottom to the same value as the width to make it a perfect circle */
+			margin: 0 auto; /* Center the thumbnail container */
+			position: relative; /* Necessary for the padding-bottom trick to work */
+			overflow: hidden; /* Hide the overflow content */
+		}
+
+
+		.thumbnail img {
+			width: 95%; /* Adjust image size as needed */
+		}
+
+        /* Adjust font styles */
+        h1{
+            font-family: 'Arial', sans-serif; /* Change font family */
+            font-size: 60px; /* Change font size */
+			text-shadow: 0 0 5px rgba(0, 0, 255, 0.7); /* Adjust the glow color and size */
+        }
+        
+        h3 {
+            font-family: 'Helvetica', sans-serif; /* Change font family */
+            font-size: 20px; /* Change font size */
+            margin: 0; /* Remove any margin */
+			color: purple;
+        }
+		
+		/* Animation shapes styles */
+        .animated-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .animated-shape {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            animation: moveShape 500s linear infinite;
+        }
+
+        /* Define the animation keyframes for the shape */
+        @keyframes moveShape {
+            0%, 100% {
+                transform: translate(10vw, 10vh);
+            }
+            25% {
+                transform: translate(50vw, 50vh);
+            }
+            50%, 75% {
+                transform: translate(90vw, 10vh);
+            }
+        }
+		
+		/* Adjust the container width to make it responsive */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Adjust column width for different screen sizes */
+        .col-md-4 {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Increase the margin for the first column on small screens */
+        @media (max-width: 768px) {
+            .col-md-4:first-child {
+                margin-top: 40px;
+            }
+        }
+
+        /* Adjust the margin and width for the second column on small screens */
+        @media (max-width: 768px) {
+            .col-md-4:last-child {
+                margin-top: 40px;
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+		
+    </style>
+<body>
+	<div class="animated-shapes">
+        <div class="animated-shape" style="background: rgba(0, 0, 255, 0.3);"></div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Welcome</a> <!-- Brand name in the navigation bar -->
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="index.html">Home</a></li> <!-- Navigation links -->
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="member_page.php">Attendance</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+	<!-- Section Goes Here -->
+    <section id="home" background-color: white; background-size: 100% 100%; " class="cl_white text-center">
+			<div class="overlay"></div> <!-- Add the overlay -->
+			<h1>LAGOS STATE UNIVERSITY</h1>
+			<p class="lead">COMPUTER SCIENCE</p>
+			<p class="sub">Practical Application of Software Development in Industries</p>
+			<div class="divider"></div> <!-- Add a decorative divider -->
+
+			<div class="container">
+				<div class="row">
+					<!-- Adjust column width for different screen sizes -->
+					<div class="col-md-4 col-sm-6">
+						<a href="login.php" class="thumbnail"><img width="60%" src="images/login.png"></a>
+						<div class="page-header">
+                        <h3>Login Here</h3>
+                    </div>
+					</div>
+					<!-- Adjust column width for different screen sizes -->
+					<div class="col-md-4 col-sm-6">
+						<a href="register.php" class="thumbnail"><img width="60%" src="images/regt.png"></a>
+						<div class="page-header">
+                        <h3>Register Here</h3>
+                    </div>
+					</div>
+				</div>
+			</div>
+			
+        
+	</section>
+    <footer class="navbar navbar-light bg-light footer-section">
+        <div class="container">
+            <p class="text-center" style="padding: 12px;">OLAITAN ABIODUN JOSEPH (200591098) CSC 392</p>
+        </div>
+    </footer>
+</body>
+</html>
